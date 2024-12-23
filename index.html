@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <title>Ana Sayfa</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" href="Sources/TRgODbjG_400x400.jpg" type="image/jpg">
+        <link rel="stylesheet" href="styles/general.css">
+        <script src="https://kit.fontawesome.com/25da1c355e.js" crossorigin="anonymous"></script>
+       <style>
+            .ana-sayfa-middle {
+                padding: 100px 0;
+            }
+
+            .object-row {
+                display: grid;
+                background: none;
+                grid-auto-flow: column;
+                margin: 0;
+                height: 260px;
+                padding: 10px 20px;
+                align-items: center;
+                justify-content: flex-start;
+                overflow-x: auto;
+                gap: 50px;
+                position: relative;
+                scroll-behavior: smooth;
+            }
+
+            .object-row::-webkit-scrollbar {
+                display: none;
+            }
+
+            .place-card {
+                background: none;
+                height: 260px;
+                width: 1200px;
+                border-radius: 48px;
+                overflow: hidden;
+                align-items: center;
+                display: flex;
+                box-shadow: 0 0 8px rgba(0, 0, 0, 0.12);
+            }
+
+            .place-card-img {
+                width: 300px;
+                height: 90%;
+                margin: 10px;
+                
+            }
+
+            .place-card-img img {
+                height: 100%;
+                width: 100%;
+                border-radius: 40px 16px 16px 40px;
+                object-fit: cover;
+            }
+
+            .place-card-desc {
+                flex:1;
+                margin-right: 10px;
+                display: flex;
+                height: 90%;
+                flex-direction: column;
+                background-color: rgb(255, 255, 255);
+                border-radius: 16px 40px 40px 16px;
+                overflow: hidden;
+                
+            }
+
+            .place-card-desc p {
+                font-size: 18px;
+                
+            }
+
+
+            .left-arrow, 
+            .right-arrow{
+                position: absolute;
+                height: 100%;
+                width: 100px;
+                top: 0;
+                display: flex;
+                align-items: center;
+                padding: 0 10px;
+                z-index: 10;
+                cursor: pointer;
+                display: none;
+            }
+
+            .right-arrow {
+                right: 0;
+                justify-content: flex-end;
+                background: linear-gradient(90deg, rgba(250, 250, 250, 0) 0%, rgba(250, 250, 250, 1) 100%);
+            }
+
+            .left-arrow {
+                background: linear-gradient(270deg, rgba(250, 250, 250, 0) 0%, rgba(250, 250, 250, 1) 100%);
+            }
+
+            .display-object svg {
+                width: 64px;
+                height: 64px;
+            }
+
+            .display-object {
+                position: relative;
+            }
+
+            .left-arrow.active,
+            .right-arrow.active {
+                display: flex;
+            }
+
+            .other-content {
+                margin: 40px 120px;
+            }
+
+            .other-content p {
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <div class="middle-section">  
+                <p>Kes-Yapıştır</p>
+                <a href="index.html" style="text-decoration:none">Ana Sayfa</a>
+                <a href="materyaller.html" style="text-decoration:none">Materyaller</a>
+                <a href="blog.html" class="blog-button" style="text-decoration:none">Blog</a>
+                <a href="hakkimizda.html" style="text-decoration:none">Hakkımızda</a>
+            </div>
+            <button class="hamburger-menu">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="navMenu">
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="materyaller.html">Materyaller</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                </ul>
+            </div>
+        </header>
+
+        
+
+        <main class="ana-sayfa-middle">
+            
+            <div class="display-object">
+                <div class="right-arrow active">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>                                        
+                </div>
+                <div class="object-row"> 
+                    <div class="place-card">
+                        <div class="place-card-img">
+                            <img src="Sources/catalhoyukthumb.jfif">
+                        </div>
+                        <div class="place-card-desc">
+                            <h1 style="margin: 16px;">Çatalhöyük: İnsanlık Tarihinin İlk Şehri</h1>
+                            <p style="padding: 0 12px; margin:8px;">İlkler Beşiği, Dünya’daki tüm şehirlerin beşiği ve şehircilik kavramlarının çıkış noktası olan Çatalhöyük, Türkiye’de Konya’nın Çumra ilçesi yakınlarındadır. 1958’de James Melleart tarafından keşfedilen Çatalhöyük, 2016 yılı itibari ile Unesco Dünya Miras Listesi’ne alınmıştır. 
+
+                            Çatalhöyük’teki ilk yerleşim günümüzden yaklaşık 9400 yıl önce Neolitik Çağ’da gerçekleşmiştir. Yıkılan evlerin üzerine toprak doldurulması ile yeni evlerin yapılması sonucu burada 21 metrelik bir tepe oluşmuştur. Evler birbirine bitişik inşa edildiğinden sokaklar çok dar ya da hiç yok gibidir. Evlere damlarda açılan merdivenlerden girilmiştir. Bu evlerde tarihin ilk ekmekleri Konya Ovası’nda üretilen buğdaydan öğütülerek yapılmıştır. Resim 2’den de anlaşılacağı üzere ev; yeme-içme, dinlenme, tapınak ve tabanına ölülerin gömüldüğü bir alan olarak kullanılmıştır. 
+
+                            İnsanlığın sosyal ve kültürel gelişimi için oldukça önemli bir yere sahip olan Çatalhöyük’te tarım ve hayvancılık sayesinde üretim başlamış, üretim sonucu artı ürün ortaya çıkmış ve devamında pek çok alanda önemli değişiklikler meydana gelmiştir. </p>
+                        </div>
+                    </div>
+                    <div class="place-card">
+                        <div class="place-card-img">
+                            <img src="Sources/orhunyazits.webp">
+                        </div>
+                        <div class="place-card-desc">
+                            <h1 style="margin: 16px;">Köktürk Kitabeleri: Türkistan Tarihine Işık Tutan Yazıtlar</h1>
+                            <p style="padding: 0 12px; margin:8px;">Türk tarihinin ilk yazılı belgesi olan Köktürk Kitabeleri, II. Köktürk Kağanlığı’na (682-744) aittir.Bu kitabeler, Türklerin bilinen ilk alfabesi olan Orhun Alfabesi ile yazılmıştır. Bilge Kağan ve  kardeşi Kültigin adına dikilen kitabeleri Yolluğ Tigin yazmıştır. Vezir Tonyukuk adına dikilen kitabeyi ile vezirin kendisi yazmıştır. Kitabelerin bir yüzü Köktürkçe diğer yüzü ise, Çince yazılmıştır. Türk adı ilk kez yer aldığı bu kitabelerde; devlet ve milletin karşılıklı vazifeleri anlatılmış olup Türk kültür ve medeniyeti hakkında önemli bilgiler verilmiştir.</p>
+                        </div>
+                    </div>
+                    <div class="place-card">
+                        <div class="place-card-img">
+                            <img src="Sources/kabe.jpg">
+                        </div>
+                        <div class="place-card-desc">
+                            <h1 style="margin: 10px;">Kabe: Müslümanların Kıblesi</h1>
+                            <p style="padding: 0 10px; margin:8px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae iusto dicta ducimus saepe mollitia est et quaerat modi error sint vel accusamus, optio, beatae laboriosam necessitatibus fugit velit similique laudantium cum sit dignissimos. Officia molestias rem ullam explicabo possimus alias, numquam aperiam repellat quia deserunt maxime aliquam. Vel, explicabo quaerat.</p>
+                        </div>
+                    </div>
+                    <div class="place-card">
+                        <div class="place-card-img">
+                            <img src="Sources/1625px-All_Gizah_Pyramids.jpg">
+                        </div>
+                        <div class="place-card-desc">
+                            <h1 style="margin: 10px;">Mısır Piramitleri: Gizemi Hala Çözülemeyen Anıtlar</h1>
+                            <p style="padding: 0 10px; margin:8px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae iusto dicta ducimus saepe mollitia est et quaerat modi error sint vel accusamus, optio, beatae laboriosam necessitatibus fugit velit similique laudantium cum sit dignissimos. Officia molestias rem ullam explicabo possimus alias, numquam aperiam repellat quia deserunt maxime aliquam. Vel, explicabo quaerat.</p>
+                        </div>
+                    </div>
+                    <div class="place-card">
+                        <div class="place-card-img">
+                            <img src="Sources/Dhi-Qar-Iraq-2022-Ziggurat-of-Ur-Sumerian-period.webp">
+                        </div>
+                        <div class="place-card-desc">
+                            <h1 style="margin: 10px;">Ziggurat: Tarihin Yazılmaya Başlandığı Yer</h1>
+                            <p style="padding: 0 10px; margin:8px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae iusto dicta ducimus saepe mollitia est et quaerat modi error sint vel accusamus, optio, beatae laboriosam necessitatibus fugit velit similique laudantium cum sit dignissimos. Officia molestias rem ullam explicabo possimus alias, numquam aperiam repellat quia deserunt maxime aliquam. Vel, explicabo quaerat.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="left-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>                  
+                </div>
+            </div>
+            <div class="other-content">
+            
+            </div>
+        </main>
+
+        <script>
+            const rightArrow = document.querySelector(".right-arrow")
+            const leftArrow = document.querySelector(".left-arrow")
+            const objectList = document.querySelector(".object-row")
+
+            const hamburger = document.querySelector(".hamburger-menu")
+            const header = document.querySelector("header")
+            const navMenu = document.querySelector(".navMenu")
+
+            const manageArrow = () => {
+                if (objectList.scrollLeft >= 20) {
+                    leftArrow.classList.add("active");
+                } else {
+                    leftArrow.classList.remove("active");   
+                }
+
+                let maxScrollValue = objectList.scrollWidth - objectList.clientWidth - 20;
+                
+                if (objectList.scrollLeft >= maxScrollValue) {
+                    rightArrow.classList.remove("active")
+                } else {
+                    rightArrow.classList.add("active")
+                }
+            };
+
+            rightArrow.addEventListener("click", () => {
+                objectList.scrollLeft += 1250;
+                manageArrow();  
+            });
+
+            leftArrow.addEventListener("click", () => {
+                objectList.scrollLeft -= 1250;
+                manageArrow();  
+            });
+
+
+            objectList.addEventListener("scroll", manageArrow);
+
+
+
+            hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("active");
+                header.classList.toggle("active");
+                navMenu.classList.toggle("active");
+                body.classList.toggle("active");
+            })
+        </script>
+    </body>
+</html>
