@@ -5,9 +5,6 @@ body {
 
 }   
 
-body.active {
-    overflow: hidden;
-}
 
 :root {
     --bg-color: #fafafa;  
@@ -63,7 +60,7 @@ body.active {
     z-index: 20;
     height: 80px;
     transition: height .2s ease, background-color .2s ease;
-    overflow-y: hidden;
+    overflow: hidden;
  /* border-bottom: 1px solid rgba(0, 0, 0, 0.445);*/
 } 
 
@@ -150,6 +147,8 @@ body.active {
     flex-direction: column;
     opacity: 0;
     transition: opacity .1s ease, transform .1s ease;
+    -moz-transition: opacity .1s ease, -moz-transform .1s ease;
+    -webkit-transition: opacity .1s ease, -webkit-transform .1s ease;
     transform: translateY(-10px);
 }
 
